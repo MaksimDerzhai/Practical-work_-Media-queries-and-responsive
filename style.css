@@ -1,0 +1,346 @@
+
+/* Загальні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка сайту */
+.header {
+    background-color: #172554;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* Блок про мене */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 70px 0;
+}
+
+.photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #3b82f6;
+    max-width: 100%;
+}
+
+.about-info {
+    max-width: 600px;
+}
+
+.about-info h1 {
+    font-size: 38px;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.about-info h2 {
+    font-size: 28px;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.about-info p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #172554;
+}
+
+/* Навички */
+.skills {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.skills h2,
+.projects h2,
+.contacts h2 {
+    font-size: 32px;
+    color: #172554;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list span {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Проєкти */
+.projects {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 23px;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    margin-bottom: 20px;
+}
+
+/* Контакти */
+.contacts {
+    background-color: #dbeafe;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contacts p {
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+/* Підвал */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Планшети */
+@media (max-width: 900px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about {
+        gap: 30px;
+    }
+
+    .photo img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .about-info h1 {
+        font-size: 30px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: 190px;
+    }
+}
+
+/* Смартфони */
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 0;
+        gap: 20px;
+    }
+
+    .photo img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .about-info h1 {
+        font-size: 25px;
+    }
+
+    .about-info h2 {
+        font-size: 23px;
+    }
+
+    .about-info p {
+        font-size: 15px;
+    }
+
+    .skills {
+        padding: 25px 0;
+    }
+
+    .skills h2,
+    .projects h2,
+    .contacts h2 {
+        font-size: 25px;
+    }
+
+    .skills-list {
+        gap: 10px;
+    }
+
+    .skills-list span {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+    .projects {
+        padding: 35px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    .project-info {
+        padding: 18px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+    .project-info .button {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contacts {
+        padding: 30px 0;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
